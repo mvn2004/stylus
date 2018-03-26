@@ -1,0 +1,55 @@
+extra-bold = 900
+primary-color = black
+light-bold = extra-bold - 200
+data = 1 2 3 4
+
+p
+	text-align center
+	a
+		color blue
+		&:hover
+			text-decoration none
+		&.link
+			background #fff
+
+.menu
+	padding 20px
+	font-weight extra-bold
+	&__item
+		background green
+		color primary-color
+
+custom-button( button-background-color )
+	border-radius 5px
+	width 100px
+	heigth 20px
+	background button-background-color
+
+customprefix( property, value )
+	-o-{property} value
+	-ms-{property} value
+	-moz-{property} value
+	-webkit-{property} value
+	{property} value	
+
+.btn-primary
+	custom-button( primary-color )
+	customprefix( 'opacity', 0.5 )
+
+.btn-secondary
+	custom-button( green )
+
+dec20percent( value = 20px )
+	value - 20%
+
+.column1
+	margin-left dec20percent( 40px )
+
+.column2
+	margin-left dec20percent( 80px )
+
+.block
+	color rgba( red(#1ed4ab), green(#1ed4ab), blue(#1ed4ab), 0.4 )
+
+/* block */
+// coment
